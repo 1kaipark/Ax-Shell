@@ -135,10 +135,9 @@ class KanbanNote(Gtk.EventBox):
         self.connect("drag-begin", self.on_drag_begin)
 
     def on_button_press(self, widget, event):
-        # If it's a double-click, start editing.
-        if event.type == Gdk.EventType._2BUTTON_PRESS:
-            self.start_edit()
-            return True
+        if event.type != Gdk.EventType._2BUTTON_PRESS:
+            return True # check this condition first
+        self.start_edit()
         return False
 
     def on_drag_begin(self, widget, context):

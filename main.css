@@ -26,6 +26,6 @@
   all: unset;
   color: var(--foreground);
   font-size: 11pt;
-  font-family: "Zed Sans";
+  font-family: "Cousine Nerd Font";
   border-radius: 16px;
 }
